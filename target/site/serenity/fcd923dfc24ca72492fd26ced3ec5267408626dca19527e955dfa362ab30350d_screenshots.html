@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">SellerCenter</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="2178db0f3631f5964ab27e15d449950a2795ab2c1bc8555959123123455fff8d.html">I As User Of The Utest</a></span>
+                > <span class="truncate-60"><a
+                    href="fcd923dfc24ca72492fd26ced3ec5267408626dca19527e955dfa362ab30350d.html">Successful user creation </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 18-02-2023 13:06</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">I As User Of The Utest </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                i want to create a new register<br />
+to access as user
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Successful user creation
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="ce6cbf7f11eb52ea0123bf6639075a5fe053895c235aafc109c42fc120170de4.png" title=" Given user in the home page" width="1920"/>
+                <img src="ce6cbf7f11eb52ea0123bf6639075a5fe053895c235aafc109c42fc120170de4.png" title=" cliente opens the browser at https://www.utest.com" width="1920"/>
+                <img src="ce6cbf7f11eb52ea0123bf6639075a5fe053895c235aafc109c42fc120170de4.png" title=" Given user in the home page (completed)" width="1920"/>
+                <img src="3b27f2b7206892a9d24e670067dd93c6a6b26846743376ef492a7dd05b501105.png" title=" When user create an account filling all fields" width="1920"/>
+                <img src="3b27f2b7206892a9d24e670067dd93c6a6b26846743376ef492a7dd05b501105.png" title=" Cliente registro task" width="1920"/>
+                <img src="4a6c5b3b45632678d89800c1c1e12affc686fb911bfef3bada5f4b6307450a1d.png" title=" cliente clicks on Ingresa al registro" width="1920"/>
+                <img src="031e965c24b199d35a24b829d6423b117854d1e532014f7dd42b1ab4baa871e9.png" title=" cliente clicks on Ingresa al registro (completed)" width="1920"/>
+                <img src="031e965c24b199d35a24b829d6423b117854d1e532014f7dd42b1ab4baa871e9.png" title=" cliente enters 'Juan' into Primer nombre" width="1920"/>
+                <img src="490aeb48cbb9f36bc54a9ea9b044dd8a26f403d9f644b46142dd96b6f03fe15b.png" title=" cliente enters 'Juan' into Primer nombre (completed)" width="1920"/>
+                <img src="490aeb48cbb9f36bc54a9ea9b044dd8a26f403d9f644b46142dd96b6f03fe15b.png" title=" cliente enters 'Tuquer' into Segundo nombre" width="1920"/>
+                <img src="b4f89495dbbc0e101ef38dd5a56ce84185377d3c1f8c08973297fb04f43a8ea8.png" title=" cliente enters 'Tuquer' into Segundo nombre (completed)" width="1920"/>
+                <img src="b4f89495dbbc0e101ef38dd5a56ce84185377d3c1f8c08973297fb04f43a8ea8.png" title=" cliente enters 'Juancho@gmail.com' into Primer nombre" width="1920"/>
+                <img src="48d6ec21d1269e24eff66b8b6917cfbd478f6a8f9a7effe4bbfcb9c7254b98f1.png" title=" cliente enters 'Juancho@gmail.com' into Primer nombre (completed)" width="1920"/>
+                <img src="48d6ec21d1269e24eff66b8b6917cfbd478f6a8f9a7effe4bbfcb9c7254b98f1.png" title=" cliente enters '16' into Dia" width="1920"/>
+                <img src="77fbdf50915f7810537fb51bbbbe7eed69f8ad340dd5a7c9fdb289122d5b94f1.png" title=" cliente enters '16' into Dia (completed)" width="1920"/>
+                <img src="77fbdf50915f7810537fb51bbbbe7eed69f8ad340dd5a7c9fdb289122d5b94f1.png" title=" cliente enters '2000' into Year" width="1920"/>
+                <img src="a0c2cdc1351016272abcdaec4434f295024bcafa9a2e5c2c52515ce1545643a3.png" title=" cliente enters '2000' into Year (completed)" width="1920"/>
+                <img src="a0c2cdc1351016272abcdaec4434f295024bcafa9a2e5c2c52515ce1545643a3.png" title=" cliente clicks on menu" width="1920"/>
+                <img src="5861c476e1e3867ff3e3b0847c58e7ab3402993d58232d3003787c0b57902e33.png" title=" cliente clicks on menu (completed)" width="1920"/>
+                <img src="5861c476e1e3867ff3e3b0847c58e7ab3402993d58232d3003787c0b57902e33.png" title=" cliente clicks on //*[contains(@id,'birthMonth')]//*[text()='March']" width="1920"/>
+                <img src="e05799ff568f301d4145fa2546774f607bf7da522a38b919b19e1007334bbe20.png" title=" cliente clicks on //*[contains(@id,'birthMonth')]//*[text()='March'] (completed)" width="1920"/>
+                <img src="e05799ff568f301d4145fa2546774f607bf7da522a38b919b19e1007334bbe20.png" title=" cliente clicks on Boton siguiente" width="1920"/>
+                <img src="5bdf2e43965512238bdba4ee4e55258c2ec225079eebd5d658ed7866ba50a994.png" title=" cliente clicks on Boton siguiente (completed)" width="1920"/>
+                <img src="5bdf2e43965512238bdba4ee4e55258c2ec225079eebd5d658ed7866ba50a994.png" title=" cliente enters '01001' into Codigo postal" width="1920"/>
+                <img src="6d771bf4e72965c47e273886e6c43a1335ec6dd8bcb4520ddb45b06896efb3ce.png" title=" cliente enters '01001' into Codigo postal (completed)" width="1920"/>
+                <img src="6d771bf4e72965c47e273886e6c43a1335ec6dd8bcb4520ddb45b06896efb3ce.png" title=" cliente clicks on Ingresa al registro" width="1920"/>
+                <img src="10986458326506f63b739b4c92ee3c361163f78018f199227b51a74bd52d599d.png" title=" cliente clicks on Ingresa al registro (completed)" width="1920"/>
+                <img src="10986458326506f63b739b4c92ee3c361163f78018f199227b51a74bd52d599d.png" title=" cliente clicks on Sistema" width="1920"/>
+                <img src="f1af7c31de6d48b035e1a3f6d20d918cf596594ed049de3da14959fed17b0d91.png" title=" cliente clicks on Sistema (completed)" width="1920"/>
+                <img src="f1af7c31de6d48b035e1a3f6d20d918cf596594ed049de3da14959fed17b0d91.png" title=" cliente clicks on Windows" width="1920"/>
+                <img src="85e580706bda197ae7df1e4d3f9b3603f745dbc20a9487d05a7909be8920a888.png" title=" cliente clicks on Windows (completed)" width="1920"/>
+                <img src="85e580706bda197ae7df1e4d3f9b3603f745dbc20a9487d05a7909be8920a888.png" title=" cliente clicks on Version" width="1920"/>
+                <img src="2e9e277401b8c841a96224134254eab7ca1e7f3475bd1213eb765d026df2fca6.png" title=" cliente clicks on Version (completed)" width="1920"/>
+                <img src="2e9e277401b8c841a96224134254eab7ca1e7f3475bd1213eb765d026df2fca6.png" title=" cliente clicks on XP" width="1920"/>
+                <img src="7e69adcb19283d9fa908a8061cc1234f43c954a00e1bcf9b5704d134896f0255.png" title=" cliente clicks on XP (completed)" width="1920"/>
+                <img src="7e69adcb19283d9fa908a8061cc1234f43c954a00e1bcf9b5704d134896f0255.png" title=" cliente clicks on Lenguaje" width="1920"/>
+                <img src="21b889439e950ace510a31fd5e6aeabb0452a649420fe363622a32fbabb1307e.png" title=" cliente clicks on Lenguaje (completed)" width="1920"/>
+                <img src="21b889439e950ace510a31fd5e6aeabb0452a649420fe363622a32fbabb1307e.png" title=" cliente clicks on Ingles" width="1920"/>
+                <img src="2a97456741a42cb798580cd0f68c2180cdc68a3b0889c14c10863101d1bdf6af.png" title=" cliente clicks on Ingles (completed)" width="1920"/>
+                <img src="2a97456741a42cb798580cd0f68c2180cdc68a3b0889c14c10863101d1bdf6af.png" title=" cliente clicks on Boton Last" width="1920"/>
+                <img src="c760039c39541463cc71525da76138c8cea17d2aa1265050ab98899c34f22a0f.png" title=" cliente clicks on Boton Last (completed)" width="1920"/>
+                <img src="c760039c39541463cc71525da76138c8cea17d2aa1265050ab98899c34f22a0f.png" title=" cliente enters 'Casa551212' into Password" width="1920"/>
+                <img src="f722325e85b7053fbec717a5c64758815586ef6494c6e15e0f07eeea20546eb5.png" title=" cliente enters 'Casa551212' into Password (completed)" width="1920"/>
+                <img src="f722325e85b7053fbec717a5c64758815586ef6494c6e15e0f07eeea20546eb5.png" title=" cliente enters 'Casa551212' into Confirmar password" width="1920"/>
+                <img src="81666c268a9eae92e3b008384c75de62de271f66ad38ba75ce7d89e2d099355a.png" title=" cliente enters 'Casa551212' into Confirmar password (completed)" width="1920"/>
+                <img src="81666c268a9eae92e3b008384c75de62de271f66ad38ba75ce7d89e2d099355a.png" title=" cliente clicks on Confirmar checkmark" width="1920"/>
+                <img src="d4e4abe2c620b3e450dc849eee9d7c3afc8cd9f50adbcefecb9c8ac9bd7377f4.png" title=" cliente clicks on Confirmar checkmark (completed)" width="1920"/>
+                <img src="d4e4abe2c620b3e450dc849eee9d7c3afc8cd9f50adbcefecb9c8ac9bd7377f4.png" title=" cliente clicks on Confirmar checkmark2" width="1920"/>
+                <img src="e8edccb0be7d586c3812a14cda323060af394f7e46cfdb5b00a8b68ea59ba7fe.png" title=" cliente clicks on Confirmar checkmark2 (completed)" width="1920"/>
+                <img src="e8edccb0be7d586c3812a14cda323060af394f7e46cfdb5b00a8b68ea59ba7fe.png" title=" cliente clicks on Boton para completar" width="1920"/>
+                <img src="1870083af9437334261ae1b1b71dcf3ff4455c09335f54c0fa8f1e48f2c1fa90.png" title=" cliente clicks on Boton para completar (completed)" width="1920"/>
+                <img src="1870083af9437334261ae1b1b71dcf3ff4455c09335f54c0fa8f1e48f2c1fa90.png" title=" Cliente registro task (completed)" width="1920"/>
+                <img src="1870083af9437334261ae1b1b71dcf3ff4455c09335f54c0fa8f1e48f2c1fa90.png" title=" When user create an account filling all fields (completed)" width="1920"/>
+                <img src="1870083af9437334261ae1b1b71dcf3ff4455c09335f54c0fa8f1e48f2c1fa90.png" title=" Then user sees its username: <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.6.12</span>
+</div>
+</body>
+</html>
