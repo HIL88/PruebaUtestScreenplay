@@ -24,7 +24,6 @@ public class RegistroTask implements Task {
                 SendKeys.of("2000").into(PersonalUI.YEAR),
                 Click.on(PersonalUI.MONTH),
                 Click.on("//*[contains(@id,'birthMonth')]//*[text()='March']"),
-                //Click.on(PersonalUI.SELECT_MONTH),
                 Click.on(PersonalUI.BUTTON_NEXT),
                 SendKeys.of("01001").into(LocalizacionUI.COD_POSTAL),
                 Click.on(LocalizacionUI.BUTTON_LOCATION),
